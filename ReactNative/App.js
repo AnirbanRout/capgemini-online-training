@@ -1,18 +1,16 @@
 import { View, StyleSheet, Platform } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 
-import ProductivityApp from "./project/pages/ProductivityApp";
-import ImagePicker from "./components/ImagePicker";
-import TakePhoto from "./components/TakePhoto";
+import EmployeeVerification from "./project/EmployeeVerification/pages/EmployeeVerfication";
+import StudentVerification from "./project/StudentVerification/pages/StudentVerification";
 
 const App = () => {
   return (
     <SafeAreaProvider>
       <SafeAreaView style={styles.safeArea}>
         <View style={styles.container}>
-          {/* <ProductivityApp /> */}
-          {/* <ImagePicker /> */}
-          <TakePhoto />
+          {/* <EmployeeVerification /> */}
+          <StudentVerification />
         </View>
       </SafeAreaView>
     </SafeAreaProvider>
