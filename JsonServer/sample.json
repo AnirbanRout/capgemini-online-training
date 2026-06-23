@@ -1,0 +1,173 @@
+{
+  "rescueCases": [
+    {
+      "id": 101,
+      "animal": "Leopard",
+      "name": "Shadow",
+          "status": "Under Treatment",
+    "severity": "High",
+    "location": {
+      "area": "Bandipur Border",
+      "state": "Karnataka"
+    },
+    "rescuedBy": "Team South",
+    "rescueDate": "2026-05-28",
+    "medical": {
+      "condition": "Deep leg wound and dehydration",
+      "treatment": "IV fluids and wound dressing",
+      "vet": "Dr. Kavya",
+      "lastUpdated": "2026-06-05"
+    },
+    "history": [
+      {
+        "date": "2026-05-28",
+        "event": "Village alert received about injured leopard"
+      },
+      {
+        "date": "2026-05-28",
+        "event": "Rescue team dispatched and tranquilized safely"
+      },
+      {
+        "date": "2026-05-29",
+        "event": "Shifted to rehabilitation center"
+      }
+    ]
+  },
+
+  {
+    "id": 102,
+    "animal": "Elephant Calf",
+    "name": "Gaja",
+    "status": "Released",
+    "severity": "Medium",
+    "location": {
+      "area": "Mudumalai Forest",
+      "state": "Tamil Nadu"
+    },
+    "rescuedBy": "Team East",
+    "rescueDate": "2026-04-15",
+    "medical": {
+      "condition": "Minor skin wounds",
+      "treatment": "Topical medication",
+      "vet": "Dr. Arjun",
+      "lastUpdated": "2026-04-20"
+    },
+    "history": [
+      {
+        "date": "2026-04-15",
+        "event": "Calf found separated from herd"
+      },
+      {
+        "date": "2026-04-16",
+        "event": "Under observation for 2 days"
+      },
+      {
+        "date": "2026-04-18",
+        "event": "Reunited with herd"
+      }
+    ]
+  },
+
+  {
+    "id": 103,
+    "animal": "Indian Python",
+    "name": "Slither",
+    "status": "Observation",
+    "severity": "Low",
+    "location": {
+      "area": "Residential Area, Mysore",
+      "state": "Karnataka"
+    },
+    "rescuedBy": "Quick Response Unit",
+    "rescueDate": "2026-06-02",
+    "medical": {
+      "condition": "No injuries, mild stress",
+      "treatment": "Observation only",
+      "vet": "Dr. Nisha",
+      "lastUpdated": "2026-06-06"
+    },
+    "history": [
+      {
+        "date": "2026-06-02",
+        "event": "Snake entered residential compound"
+      },
+      {
+        "date": "2026-06-02",
+        "event": "Safely captured by rescue team"
+      },
+      {
+        "date": "2026-06-03",
+        "event": "Kept under observation before release"
+      }
+    ]
+  },
+
+  {
+    "id": 104,
+    "animal": "Peacock",
+    "name": "Neel",
+    "status": "Recovered",
+    "severity": "Medium",
+    "location": {
+      "area": "Village near Hassan",
+      "state": "Karnataka"
+    },
+    "rescuedBy": "Team Rural",
+    "rescueDate": "2026-05-10",
+    "medical": {
+      "condition": "Wing fracture",
+      "treatment": "Splint and rest",
+      "vet": "Dr. Meera",
+      "lastUpdated": "2026-05-25"
+    },
+    "history": [
+      {
+        "date": "2026-05-10",
+        "event": "Reported unable to fly"
+      },
+      {
+        "date": "2026-05-11",
+        "event": "Fracture diagnosed"
+      },
+      {
+        "date": "2026-05-22",
+        "event": "Recovery progress observed"
+      }
+    ]
+  },
+
+  {
+    "id": 105,
+    "animal": "Sloth Bear",
+    "name": "Baloo",
+    "status": "Critical",
+    "severity": "Very High",
+    "location": {
+      "area": "Dandeli Wildlife Zone",
+      "state": "Karnataka"
+    },
+    "rescuedBy": "Core Rescue Team",
+    "rescueDate": "2026-06-01",
+    "medical": {
+      "condition": "Severe malnutrition and infection",
+      "treatment": "Nutritional therapy and antibiotics",
+      "vet": "Dr. Raghav",
+      "lastUpdated": "2026-06-07"
+    },
+    "history": [
+      {
+        "date": "2026-06-01",
+        "event": "Found weak and immobile"
+      },
+      {
+        "date": "2026-06-01",
+        "event": "Transported to emergency care"
+      },
+      {
+        "date": "2026-06-03",
+        "event": "Under intensive monitoring"
+      }
+    ]
+  }
+]
+}

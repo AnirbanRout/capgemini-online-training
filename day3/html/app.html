@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter App</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: sans-serif;
+            background: #f5f5f5;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            padding: 2rem 1rem;
+        }
+
+        main {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 2rem;
+            width: 100%;
+            max-width: 560px;
+            height: fit-content;
+        }
+
+        #head {
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        #movie-names {
+            height: 36px;
+            padding: 0 12px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            outline: none;
+            margin-right: 8px;
+            width: 60%;
+        }
+
+        #movie-names:focus {
+            border-color: #185fa5;
+            box-shadow: 0 0 0 2px rgba(24, 95, 165, 0.2);
+        }
+
+        button {
+            height: 36px;
+            padding: 0 14px;
+            font-size: 13px;
+            font-weight: 500;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background: transparent;
+            cursor: pointer;
+            margin-right: 6px;
+            margin-bottom: 8px;
+        }
+
+        button:hover {
+            background: #f0f0f0;
+        }
+
+        #load-movies {
+            border-color: #185fa5;
+            color: #185fa5;
+        }
+
+        #filter-movies {
+            border-color: #534ab7;
+            color: #534ab7;
+        }
+
+        #remove-movies {
+            border-color: #a32d2d;
+            color: #a32d2d;
+        }
+
+        #head2 {
+            font-size: 15px;
+            font-weight: 500;
+            color: #666;
+            margin: 1.5rem 0 0.75rem;
+        }
+
+        ul li {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 14px;
+            border: 1px solid #e8e8e8;
+            border-radius: 8px;
+            background: #fafafa;
+            font-size: 14px;
+            margin-bottom: 6px;
+        }
+
+        ul li {
+            list-style: none;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <main>
+        <h2 id="head">Movie List Filter App</h2>
+        <input type="text" name="" id="movie-names">
+        <button id="load-movies">Load Movies</button>
+        <button id="filter-movies">Show Long Names</button>
+        <button id="remove-movies">Remove Last Movie</button>
+
+        <h2 id="head2">Movie List:</h2>
+        <ul id="movie-list"></ul>
+
+    </main>
+
+    <script src="/day3/js/app.js"></script>
+
+</body>
+
+</html>

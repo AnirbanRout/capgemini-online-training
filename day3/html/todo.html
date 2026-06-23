@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoList</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: sans-serif;
+            background: #f0f2f5;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            padding: 60px 16px;
+        }
+
+        #container {
+            background: white;
+            border-radius: 14px;
+            overflow: hidden;
+            width: 100%;
+            max-width: 520px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            height: fit-content;
+        }
+
+        .heading {
+            background: #1a1a2e;
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+            padding: 24px;
+            margin: 0;
+        }
+
+        .task-input,
+        .btn,
+        #tasks {
+            display: inline-block;
+            margin: 20px 0;
+        }
+
+        .task-input {
+            width: calc(100% - 130px);
+            padding: 10px 14px;
+            margin: 24px 0 24px 24px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 14px;
+            outline: none;
+            transition: border-color 0.2s;
+            background: #f8f9fa;
+            vertical-align: middle;
+        }
+
+        .task-input:focus {
+            border-color: #1a1a2e;
+        }
+
+        .btn {
+            width: 95px;
+            margin: 20px;
+            padding: 10px;
+            background: #1a1a2e;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background 0.2s;
+            vertical-align: middle;
+        }
+
+        .btn:hover {
+            background: #2e2e50;
+            color: white;
+        }
+
+        #tasks {
+            display: block;
+            padding: 0 24px 24px;
+        }
+
+        .tasks-heading {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: #999;
+            margin-bottom: 12px;
+        }
+
+        #tasks_list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .task-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 14px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .task-text {
+            flex: 1;
+        }
+
+        .task-btn {
+            padding: 5px 12px;
+            border: none;
+            border-radius: 6px;
+            font-size: 12px;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+
+        .task-btn:hover {
+            opacity: 0.8;
+        }
+
+        .edit-btn {
+            background: #e8e8e8;
+            color: #333;
+        }
+
+        .delete-btn {
+            background: #ffe5e5;
+            color: #cc0000;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <main id="container">
+
+        <h2 class="heading">Task Manager</h2>
+        <input type="text" class="task-input" id="task_name">
+        <button class="btn" id="btn">Add</button>
+
+        <section id="tasks">
+            <h2 class="tasks-heading">Tasks</h2>
+            <ul id="tasks_list"></ul>
+        </section>
+
+    </main>
+
+    <script src="/day3/js/todo.js"></script>
+
+</body>
+
+</html>

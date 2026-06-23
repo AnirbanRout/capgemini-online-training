@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Dashboard</title>
+    <link rel="stylesheet" href="/day4/css/employee.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Employee Dashboard</h1>
+
+            <div class="filter-section">
+                <label for="dept-filter">Filter by Department:</label>
+                <select id="dept-filter">
+                    <option value="All">All Departments</option>
+                    <option value="Engineering">Engineering</option>
+                    <option value="HR">HR</option>
+                    <option value="Marketing">Marketing</option>
+                    <option value="Design">Design</option>
+                </select>
+            </div>
+        </header>
+
+        <section class="stats-container">
+            <div class="stat-card">
+                <h3>Total Employees</h3>
+                <p id="total-emp">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>Highest Salary</h3>
+                <p id="max-salary">$0</p>
+            </div>
+            <div class="stat-card">
+                <h3>Lowest Salary</h3>
+                <p id="min-salary">$0</p>
+            </div>
+            <div class="stat-card">
+                <h3>Average Salary</h3>
+                <p id="avg-salary">0</p>
+            </div>
+        </section>
+
+        <main class="main-content">
+            <div class="employee-list-section">
+                <h2>Employee List</h2>
+                <table id="employee-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Department</th>
+                            <th>Position</th>
+                            <th>Salary</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body">
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="details-panel" id="details-panel">
+                <h2>Employee Details</h2>
+                <div id="details-content">
+                    <p>Click "View Details" on an employee to see more info.</p>
+                </div>
+            </div>
+        </main>
+
+        <section class="add-employee-form">
+            <h2>Add New Employee</h2>
+            <form id="employee-form">
+                <div class="form-group">
+                    <input type="number" id="new-id" placeholder="ID" required>
+                    <input type="text" id="new-name" placeholder="Name" required>
+                    <select id="new-dept" required>
+                        <option value="">Select Dept</option>
+                        <option value="Engineering">Engineering</option>
+                        <option value="HR">HR</option>
+                        <option value="Marketing">Marketing</option>
+                        <option value="Design">Design</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="new-position" placeholder="Position" required>
+                    <input type="number" id="new-salary" placeholder="Salary" required>
+                    <input type="text" id="new-location" placeholder="Location" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="new-skills" placeholder="Skills (comma separated)" required>
+                </div>
+                <button type="submit">Add Employee</button>
+            </form>
+        </section>
+    </div>
+
+    <script src="/day4/js/employee.js"></script>
+</body>
+
+</html>

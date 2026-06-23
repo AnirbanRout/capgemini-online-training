@@ -1,0 +1,106 @@
+/* ---------------- RESET ---------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ---------------- BODY ---------------- */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f4f6;
+    color: #111827;
+}
+
+/* ---------------- MAIN LAYOUT ---------------- */
+.app {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ---------------- HEADER ---------------- */
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header-title {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.header-sub {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+/* ---------------- PANEL ---------------- */
+.config-panel,
+.timeline-panel {
+    background-color: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+/* ---------------- LABEL ---------------- */
+.config-label {
+    font-size: 12px;
+    color: #6b7280;
+    margin-bottom: 10px;
+}
+
+/* ---------------- STEPS ---------------- */
+.steps-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* ---------------- STEP CARD ---------------- */
+.step-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+}
+
+/* ---------------- SELECT ---------------- */
+select {
+    padding: 5px;
+    border: 1px solid #d1d5db;
+    border-radius: 5px;
+    background-color: white;
+}
+
+/* ---------------- BUTTON ---------------- */
+.run-btn {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #2563eb;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.run-btn:hover {
+    background-color: #1d4ed8;
+}
+
+/* ---------------- RESULT ---------------- */
+.timeline-header {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.timeline-empty {
+    font-size: 14px;
+    color: #6b7280;
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Management System</title>
+
+    <link rel="stylesheet" href="/day4/css/school.css">
+</head>
+
+<body>
+
+    <main>
+
+        <div id="options">
+
+            <button id="add-student-btn">
+                Add Student
+            </button>
+
+            <button id="add-teacher-btn">
+                Add Teacher
+            </button>
+
+            <!-- NEW BUTTONS -->
+
+            <button id="show-all">
+                Show All Records
+            </button>
+
+            <button id="clear-all">
+                Clear All
+            </button>
+
+        </div>
+
+        <div id="container">
+
+            <div id="add-student">
+
+                <h2>Add Student</h2>
+
+                <label for="student-id">Id:</label>
+                <input type="text" id="student-id" name="student-id">
+
+                <label for="student-name">Name:</label>
+                <input type="text" id="student-name" name="student-name">
+
+                <label for="student-age">Age:</label>
+                <input type="number" id="student-age" name="student-age">
+
+                <label for="student-grade">Grade:</label>
+                <input type="text" id="student-grade" name="student-grade">
+
+                <button id="submit-student">
+                    Add Student
+                </button>
+
+            </div>
+
+            <div id="add-teacher">
+
+                <h2>Add Teacher</h2>
+
+                <label for="teacher-id">Id:</label>
+                <input type="text" id="teacher-id" name="teacher-id">
+
+                <label for="teacher-name">Name:</label>
+                <input type="text" id="teacher-name" name="teacher-name">
+
+                <label for="teacher-age">Age:</label>
+                <input type="number" id="teacher-age" name="teacher-age">
+
+                <label for="teacher-subject">Subject:</label>
+                <input type="text" id="teacher-subject" name="teacher-subject">
+
+                <label for="teacher-salary">Salary:</label>
+                <input type="number" id="teacher-salary" name="teacher-salary">
+
+                <button id="submit-teacher">
+                    Add Teacher
+                </button>
+
+            </div>
+
+        </div>
+
+        <div id="records">
+            <div id="cards"></div>
+        </div>
+
+    </main>
+
+    <script src="/day4/js/school.js"></script>
+
+</body>
+
+</html>

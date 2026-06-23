@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Food Delivery</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        main {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+            text-align: center;
+        }
+
+        p {
+            color: #666;
+            text-align: center;
+        }
+
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+            display: block;
+            margin: 20px auto;
+        }
+
+        #loading {
+            margin-top: 20px;
+            font-size: 20px;
+        }
+
+        #result {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #d4edda;
+            color: green;
+            border-radius: 5px;
+            display: none;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <main id="container">
+
+        <h2>Online Food Delivery</h2>
+        <p>Welcome to our online food delivery service!</p>
+        <button id="btn">Order Food</button>
+
+        <p id="loading"></p>
+
+        <div id="result"></div>
+
+        <script src="/day3/js/callback.js"></script>
+    </main>
+
+</body>
+
+</html>

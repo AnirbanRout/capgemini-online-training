@@ -1,0 +1,61 @@
+Task: Product Promotion Card 
+
+An online shopping website wants to display a product promotion card for a newly launched product.
+ 
+Card Content
+
+Your card should include:
+
+🎧 Product Icon (use emoji or icon)
+
+📝 Product Name: Wireless Headphones
+
+📄 Description: Enjoy clear sound and comfortable listening all day.
+
+💰 Price: ₹1999
+
+🔘 Button: Buy Now
+
+🎨 Design Requirements
+ 
+1. Page Layout
+
+Center the card on the page
+
+Add a light background color to the page
+
+Card should have:
+
+	padding
+
+	rounded corners
+
+	shadow
+ 
+2. Product Icon Animation
+
+The headphone icon should move up and down continuously
+
+Use CSS animation
+ 
+3. Card Hover Effect
+
+When the user hovers on the card:
+
+Card should move slightly upward
+
+Shadow should increase slightly
+
+Use transition for smooth effect
+ 
+4. Button Hover Effect
+
+When the user hovers on Buy Now:
+
+Button color should change
+
+Button should slightly grow
+
+Use transition
+ 
+ 

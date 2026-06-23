@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f0f2f8;
+    color: #333;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 0 40px;
+}
+
+/* ── Header ── */
+main::before {
+    content: '🎓 School Management System';
+    display: block;
+    background: linear-gradient(135deg, #5c35d4, #7b5cf0);
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-align: center;
+    padding: 22px 0;
+    margin-bottom: 24px;
+}
+
+/* ── Tab buttons ── */
+#options {
+    display: flex;
+    gap: 0;
+    margin: 0 0 20px;
+    border-bottom: 2px solid #ddd;
+}
+
+#options button {
+    padding: 10px 24px;
+    font-size: 0.92rem;
+    font-weight: 600;
+    border: 1.5px solid #ccc;
+    background: #fff;
+    cursor: pointer;
+    border-radius: 8px 8px 0 0;
+    color: #555;
+    transition: all 0.2s;
+    margin-right: 4px;
+}
+
+#options button:first-child {
+    color: #4a6cf7;
+    border-color: #4a6cf7;
+    border-bottom: 2px solid #fff;
+    position: relative;
+    bottom: -2px;
+}
+
+#options button:hover {
+    background: #f5f5ff;
+    color: #4a6cf7;
+}
+
+/* ── Two-column form layout ── */
+#container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 28px;
+}
+
+/* ── Form panels ── */
+#add-student,
+#add-teacher {
+    background: #fff;
+    border-radius: 12px;
+    border: 1.5px solid #e4e4f0;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#add-student h2 {
+    color: #4a6cf7;
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+#add-teacher h2 {
+    color: #2ba84a;
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+label {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: -4px;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 9px 12px;
+    border: 1.5px solid #d8d8e8;
+    border-radius: 7px;
+    font-size: 0.9rem;
+    color: #333;
+    background: #fafafa;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border-color: #4a6cf7;
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(74, 108, 247, 0.1);
+}
+
+/* ── Submit buttons ── */
+#submit-student {
+    margin-top: 6px;
+    padding: 11px;
+    background: #4a6cf7;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+}
+
+#submit-student:hover {
+    background: #3558e8;
+}
+
+#submit-student:active {
+    transform: scale(0.98);
+}
+
+#submit-teacher {
+    margin-top: 6px;
+    padding: 11px;
+    background: #2ba84a;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+}
+
+#submit-teacher:hover {
+    background: #239040;
+}
+
+#submit-teacher:active {
+    transform: scale(0.98);
+}
+
+/* ── Records section ── */
+#records {
+    background: #fff;
+    border-radius: 12px;
+    border: 1.5px solid #e4e4f0;
+    padding: 20px;
+}
+
+#cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    gap: 16px;
+    margin-top: 8px;
+}
+
+/* ── Individual card ── */
+.card {
+    border-radius: 12px;
+    border: 1.5px solid #e0e4f8;
+    padding: 18px 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    background: #f5f7ff;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.card:hover {
+    box-shadow: 0 4px 18px rgba(74, 108, 247, 0.12);
+    transform: translateY(-2px);
+}
+
+.card.teacher {
+    background: #f3fcf6;
+    border-color: #c2e8cc;
+}
+
+.card img,
+.card .avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #dde3fc;
+    margin-bottom: 4px;
+}
+
+.card .badge {
+    padding: 3px 16px;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
+.card.student .badge {
+    background: #4a6cf7;
+    color: #fff;
+}
+
+.card.teacher .badge {
+    background: #2ba84a;
+    color: #fff;
+}
+
+.card .info {
+    width: 100%;
+    font-size: 0.82rem;
+    color: #444;
+    line-height: 1.7;
+    margin-top: 4px;
+}
+
+.card .info span {
+    font-weight: 600;
+    color: #222;
+}
+
+.card .grade-tag {
+    width: 100%;
+    text-align: center;
+    padding: 6px 0;
+    border-radius: 8px;
+    background: #eaf3e8;
+    color: #2ba84a;
+    font-size: 0.82rem;
+    font-weight: 700;
+    margin-top: 4px;
+    border: 1px solid #c3dfc8;
+}
+
+.card .salary-tag {
+    width: 100%;
+    text-align: center;
+    padding: 8px 0;
+    border-radius: 8px;
+    background: #e8f5ec;
+    color: #1e8a3c;
+    font-size: 0.88rem;
+    font-weight: 700;
+    margin-top: 6px;
+    border: 1px solid #b8dfc3;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CabFlow</title>
+    <link rel="stylesheet" href="/day4/css/cab.css" />
+</head>
+
+<body>
+
+    <main class="app">
+        <header class="header">
+            <h1 class="header-title">CabFlow</h1>
+            <p class="header-sub">Simple booking workflow</p>
+        </header>
+
+        <section class="config-panel">
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div>Validate Location</div>
+                    <select data-key="step1">
+                        <option value="true">true</option>
+                        <option value="false">false</option>
+                    </select>
+                </div>
+                <div class="step-card">
+                    <div>Find Drivers</div>
+                    <select data-key="step2">
+                        <option value="true">true</option>
+                        <option value="false">false</option>
+                    </select>
+                </div>
+                <div class="step-card">
+                    <div>Calculate Fare</div>
+                    <select data-key="step3">
+                        <option value="true">true</option>
+                        <option value="false">false</option>
+                    </select>
+                </div>
+                <div class="step-card">
+                    <div>Verify Payment</div>
+                    <select data-key="step4">
+                        <option value="true">true</option>
+                        <option value="false">false</option>
+                    </select>
+                </div>
+                <div class="step-card">
+                    <div>Assign Driver</div>
+                    <select data-key="step5">
+                        <option value="true">true</option>
+                        <option value="false">false</option>
+                    </select>
+                </div>
+                <div class="step-card">
+                    <div>Confirm Booking</div>
+                    <select data-key="step6">
+                        <option value="true">true</option>
+                        <option value="false">false</option>
+                    </select>
+                </div>
+            </div>
+            <button id="runBtn" class="run-btn">Start Booking</button>
+        </section>
+
+        <section class="timeline-panel">
+            <div class="timeline-header">
+                <div>Result</div>
+            </div>
+
+            <div id="timelineTrack">
+                <div class="timeline-empty">Click start to run workflow</div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="/day4/js/cab.js"></script>
+</body>
+
+</html>

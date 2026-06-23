@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+}
+
+h1 {
+    background-color: #1a3a6b;
+    color: #fff;
+    text-align: center;
+    padding: 20px 24px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 24px 20px 40px;
+}
+
+#details {
+    background: #fff;
+    border: 1px solid #dde3ec;
+    border-radius: 10px;
+    padding: 24px 28px;
+    margin-bottom: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+    align-items: flex-end;
+}
+
+#details label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #333;
+    flex: 1 1 180px;
+    padding-bottom: 4px;
+}
+
+#details input {
+    padding: 10px 12px;
+    border: 1px solid #cdd4df;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #333;
+    flex: 1 1 180px;
+}
+
+#details input:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+#btn {
+    flex: 0 0 100%;
+    align-self: center;
+    width: fit-content;
+    margin: 12px auto 0;
+    background-color: #2563eb;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 11px 36px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    display: block;
+}
+
+#btn:hover {
+    background-color: #1d4ed8;
+}
+
+#btn:active {
+    background-color: #1e40af;
+}
+
+#student-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#student-details h2 {
+    font-size: 14px;
+    font-weight: 700;
+    padding: 0 4px 4px;
+    flex: 1 1 40%;
+}
+
+#student-details h2:first-child {
+    color: #b45309;
+}
+
+#student-details h2:nth-child(3) {
+    color: #15803d;
+}
+
+.details {
+    border-radius: 10px;
+    padding: 16px 20px;
+    min-height: 80px;
+    flex: 1 1 40%;
+}
+
+#old-details {
+    background-color: #fffaf3;
+    border: 1px solid #f5c97a;
+}
+
+#updated-details {
+    background-color: #f4fcf4;
+    border: 1px solid #7ec87e;
+}
+
+#old-details p,
+#updated-details p {
+    padding: 8px 0;
+    font-size: 14px;
+    border-bottom: 1px dashed;
+}
+
+#old-details p {
+    border-color: #f5c97a;
+    color: #444;
+}
+
+#updated-details p {
+    border-color: #7ec87e;
+    color: #444;
+}
+
+#old-details p:last-child,
+#updated-details p:last-child {
+    border-bottom: none;
+}

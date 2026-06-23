@@ -1,0 +1,17 @@
+#an-btn {
+    padding: 15px 20px;
+    background-color: purple;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin: 20px;
+
+    transition: background-color 1s ease, transform 1s ease;
+
+}
+
+#an-btn:hover {
+    background-color: black;
+    transform: scale(1.2);
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile Editor</title>
+
+    <link rel="stylesheet" href="/day4/css/profile.css">
+
+</head>
+
+<body>
+
+    <main>
+        <h1>Student Profile Editor</h1>
+        <div id="details">
+            <label for="name">Student Name:</label>
+            <input type="text" id="name" name="name" value="Ravi">
+
+            <label for="course-name">Course Name:</label>
+            <input type="text" id="course-name" name="course-name" value="JavaScript Basics">
+
+            <label for="skills">Skills:(comma separated)</label>
+            <input type="text" id="skills" name="skills" value="HTML, CSS, JavaScript">
+
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" value="Bangalore">
+
+            <button type="submit" id="btn">Update Profile</button>
+        </div>
+
+        <div id="student-details">
+            <h2>Old Details:</h2>
+            <div class="details" id="old-details"></div>
+            <h2>Updated Details:</h2>
+            <div class="details" id="updated-details"></div>
+        </div>
+
+    </main>
+
+    <script src="/day4/js/profile.js"></script>
+
+</body>
+
+</html>
