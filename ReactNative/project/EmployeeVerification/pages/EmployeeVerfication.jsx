@@ -10,7 +10,7 @@ import { useState } from "react";
 
 const EmployeeVerification = () => {
   const [profilePhoto, setProfilePhoto] = useState(null);
-  const [idCard, setIdCard] = useState(null);
+  const [idCard, setIdCard] = useState([]);
 
   return (
     <View>
