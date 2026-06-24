@@ -8,8 +8,22 @@ const Products = ({ route, navigation }) => {
   const [search, setSearch] = useState("");
 
   const addToCart = (product) => {
-    setCart((prevCart) => [...prevCart, product]);
+    setCart((prevCart) => {
+      const existingItem = prevCart.find((item) => item.id === product.id);
+
+      if (existingItem) {
+        return prevCart.map((item) =>
+          item.id === product.id
+            ? { ...item, quantity: item.quantity + 1 }
+            : item,
+        );
+      }
+
+      return [...prevCart, { ...product, quantity: 1 }];
+    });
   };
+
+  const cartCount = cart.reduce((sum, item) => sum + item.quantity, 0);
 
   const filteredProducts = useMemo(() => {
     return products.filter((prod) =>
@@ -20,16 +34,20 @@ const Products = ({ route, navigation }) => {
   return (
     <View>
       <Text>Products Page</Text>
-      <Text>Cart Items: {cart.length}</Text>
+      <Text>Cart Items: {cartCount}</Text>
 
       <TextInput
         placeholder="Search products..."
         value={search}
         onChangeText={setSearch}
+        style={{ borderWidth: 1, marginBottom: 10, padding: 5 }}
       />
 
       {filteredProducts.map((product) => (
-        <View key={product.id}>
+        <View
+          key={product.id}
+          style={{ borderWidth: 1, marginBottom: 10, padding: 5 }}
+        >
           <Text>Name: {product.name}</Text>
           <Text>Price: ${product.price}</Text>
           <Text>Category: {product.category}</Text>
