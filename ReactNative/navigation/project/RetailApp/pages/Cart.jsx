@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { View, Text, Button } from "react-native";
+import { View, Text, Button, ScrollView } from "react-native";
 
 const Cart = ({ route, navigation }) => {
   const [cartItems, setCartItems] = useState([]);
@@ -59,36 +59,41 @@ const Cart = ({ route, navigation }) => {
   };
 
   return (
-    <View>
+    <View style={{ flex: 1, padding: 10 }}>
       <Text>Cart Page</Text>
 
-      {cartItems.length === 0 ? (
-        <Text>Your cart is empty.</Text>
-      ) : (
-        <>
-          {cartItems.map((item, index) => (
-            <View key={index}>
-              <Text>Name: {item.name}</Text>
-              <Text>Price: ${item.price}</Text>
-              <Text>Category: {item.category}</Text>
-              <Text>Stock: {item.stock}</Text>
-              <Text>SKU: {item.sku}</Text>
-              <Text>Tax Rate: {item.taxRate}%</Text>
-              <Text>Quantity: {item.quantity}</Text>
+      <ScrollView style={{ marginBottom: 10, flex: 1 }}>
+        {cartItems.length === 0 ? (
+          <Text>Your cart is empty.</Text>
+        ) : (
+          <>
+            {cartItems.map((item, index) => (
+              <View
+                key={index}
+                style={{ borderWidth: 1, marginBottom: 10, padding: 5 }}
+              >
+                <Text>Name: {item.name}</Text>
+                <Text>Price: ${item.price}</Text>
+                <Text>Category: {item.category}</Text>
+                <Text>Stock: {item.stock}</Text>
+                <Text>SKU: {item.sku}</Text>
+                <Text>Tax Rate: {item.taxRate}%</Text>
+                <Text>Quantity: {item.quantity}</Text>
 
-              <Button title="+" onPress={() => increaseQuantity(index)} />
-              <Button title="-" onPress={() => decreaseQuantity(index)} />
-              <Button title="Remove Item" onPress={() => removeItem(index)} />
-            </View>
-          ))}
+                <Button title="+" onPress={() => increaseQuantity(index)} />
+                <Button title="-" onPress={() => decreaseQuantity(index)} />
+                <Button title="Remove Item" onPress={() => removeItem(index)} />
+              </View>
+            ))}
 
-          <Text>Subtotal: ${subtotal.toFixed(2)}</Text>
-          <Text>Tax: ${tax.toFixed(2)}</Text>
-          <Text>Total: ${total.toFixed(2)}</Text>
+            <Text>Subtotal: ${subtotal.toFixed(2)}</Text>
+            <Text>Tax: ${tax.toFixed(2)}</Text>
+            <Text>Total: ${total.toFixed(2)}</Text>
 
-          <Button title="Place Order" onPress={placeOrder} />
-        </>
-      )}
+            <Button title="Place Order" onPress={placeOrder} />
+          </>
+        )}
+      </ScrollView>
 
       <Button title="Back to Products" onPress={() => navigation.goBack()} />
     </View>

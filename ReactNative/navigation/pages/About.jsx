@@ -9,8 +9,8 @@ const About = ({ navigation, route }) => {
   return (
     <View>
       <Text>About Screen</Text>
-      <Text>Name: {name}</Text>
-      <Text>Age: {age}</Text>
+      {/* <Text>Name: {name}</Text>
+      <Text>Age: {age}</Text> */}
       <Button title="Go to Home" onPress={() => navigation.navigate("Home")} />
     </View>
   );

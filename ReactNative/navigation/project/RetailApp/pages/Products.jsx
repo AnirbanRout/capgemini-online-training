@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from "react";
 import { View, Text, TextInput, Button } from "react-native";
+import { ScrollView } from "react-native";
 
 const Products = ({ route, navigation }) => {
   const { products } = route.params;
@@ -32,7 +33,7 @@ const Products = ({ route, navigation }) => {
   }, [products, search]);
 
   return (
-    <View>
+    <View style={{ flex: 1, padding: 10 }}>
       <Text>Products Page</Text>
       <Text>Cart Items: {cartCount}</Text>
 
@@ -43,25 +44,27 @@ const Products = ({ route, navigation }) => {
         style={{ borderWidth: 1, marginBottom: 10, padding: 5 }}
       />
 
-      {filteredProducts.map((product) => (
-        <View
-          key={product.id}
-          style={{ borderWidth: 1, marginBottom: 10, padding: 5 }}
-        >
-          <Text>Name: {product.name}</Text>
-          <Text>Price: ${product.price}</Text>
-          <Text>Category: {product.category}</Text>
-          <Text>Stock: {product.stock}</Text>
-          <Text>SKU: {product.sku}</Text>
-          <Text>Tax Rate: {product.taxRate}%</Text>
+      <ScrollView style={{ marginBottom: 10, flex: 1 }}>
+        {filteredProducts.map((product) => (
+          <View
+            key={product.id}
+            style={{ borderWidth: 1, marginBottom: 10, padding: 5 }}
+          >
+            <Text>Name: {product.name}</Text>
+            <Text>Price: ${product.price}</Text>
+            <Text>Category: {product.category}</Text>
+            <Text>Stock: {product.stock}</Text>
+            <Text>SKU: {product.sku}</Text>
+            <Text>Tax Rate: {product.taxRate}%</Text>
 
-          <Button title="Add to Cart" onPress={() => addToCart(product)} />
-        </View>
-      ))}
+            <Button title="Add to Cart" onPress={() => addToCart(product)} />
+          </View>
+        ))}
+      </ScrollView>
 
       <Button
         title="View Cart"
-        onPress={() => navigation.navigate("Cart", { cart })}
+        onPress={() => navigation.navigate("Cart", { cartItems: cart })}
       />
     </View>
   );

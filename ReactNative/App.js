@@ -9,11 +9,13 @@ import Home from "./navigation/pages/Home";
 import About from "./navigation/pages/About";
 import FoodDelivery from "./navigation/project/FoodDeliveryApp/pages/FoodDelivery";
 import RetailApp from "./navigation/project/RetailApp/pages/RetailApp";
+import DrawerNavigatorDemo from "./navigation/pages/DrawerNavigatorDemo";
 
 const App = () => {
   return (
     // <FoodDelivery />
-    <RetailApp />
+    // <RetailApp />
+    <DrawerNavigatorDemo />
   );
 };
 
