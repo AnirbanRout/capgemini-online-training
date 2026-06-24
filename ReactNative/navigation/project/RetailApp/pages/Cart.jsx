@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { View, Text, Button } from "react-native";
 
 const Cart = ({ route, navigation }) => {
-  const { cart } = route.params || { cart: [] };
+  const [cartItems, setCartItems] = useState([]);
 
-  const [cartItems, setCartItems] = useState(cart);
+  useEffect(() => {
+    setCartItems(route.params?.cartItems || []);
+  }, [route.params?.cartItems]);
 
   const increaseQuantity = (index) => {
     const updatedCart = [...cartItems];
@@ -87,6 +89,8 @@ const Cart = ({ route, navigation }) => {
           <Button title="Place Order" onPress={placeOrder} />
         </>
       )}
+
+      <Button title="Back to Products" onPress={() => navigation.goBack()} />
     </View>
   );
 };
