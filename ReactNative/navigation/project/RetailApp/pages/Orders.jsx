@@ -1,17 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { View, Text, Button, ScrollView } from "react-native";
 
-const Orders = ({ route }) => {
+const Orders = ({ route, navigation }) => {
   const [orders, setOrders] = useState([]);
   const [selectedOrder, setSelectedOrder] = useState(null);
 
   useEffect(() => {
     if (route.params?.newOrder) {
-      setOrders((prev) =>
-        [route.params.newOrder, ...prev].sort(
-          (a, b) => new Date(b.orderDate) - new Date(a.orderDate),
-        ),
-      );
+      setOrders((prevOrders) => [...prevOrders, route.params.newOrder]);
     }
   }, [route.params?.newOrder]);
 
@@ -33,7 +29,11 @@ const Orders = ({ route }) => {
           >
             <Text>Order ID: {order.id}</Text>
             <Text>Time: {new Date(order.orderDate).toLocaleString()}</Text>
-            <Text>Items: {order.items.length}</Text>
+            {order.items.map((item) => (
+              <Text key={item.id}>
+                {item.name} : {item.quantity}
+              </Text>
+            ))}
             <Text>Total: ${order.total.toFixed(2)}</Text>
 
             <Button
@@ -43,6 +43,8 @@ const Orders = ({ route }) => {
           </View>
         ))
       )}
+
+      <Button title="Cart" onPress={() => navigation.navigate("Cart")} />
 
       {selectedOrder && (
         <View
@@ -65,11 +67,8 @@ const Orders = ({ route }) => {
           ))}
 
           <Text>Subtotal: ${selectedOrder.subtotal.toFixed(2)}</Text>
-
           <Text>Tax: ${selectedOrder.tax.toFixed(2)}</Text>
-
           <Text>Total: ${selectedOrder.total.toFixed(2)}</Text>
-
           <Button title="Close" onPress={() => setSelectedOrder(null)} />
         </View>
       )}

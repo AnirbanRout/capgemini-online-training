@@ -4,12 +4,7 @@ import { View, Text, Button } from "react-native";
 const Cart = ({ route, navigation }) => {
   const { cart } = route.params || { cart: [] };
 
-  const [cartItems, setCartItems] = useState(
-    cart.map((item) => ({
-      ...item,
-      quantity: item.quantity || 1,
-    })),
-  );
+  const [cartItems, setCartItems] = useState(cart);
 
   const increaseQuantity = (index) => {
     const updatedCart = [...cartItems];
@@ -20,14 +15,18 @@ const Cart = ({ route, navigation }) => {
   const decreaseQuantity = (index) => {
     const updatedCart = [...cartItems];
 
-    if (updatedCart[index].quantity > 1) {
+    if (updatedCart[index].quantity > 0) {
       updatedCart[index].quantity -= 1;
       setCartItems(updatedCart);
     }
   };
 
   const removeItem = (index) => {
-    setCartItems(cartItems.filter((_, i) => i !== index));
+    setCartItems(
+      cartItems.filter((_, idx) => {
+        return idx !== index;
+      }),
+    );
   };
 
   const subtotal = cartItems.reduce(
@@ -76,9 +75,7 @@ const Cart = ({ route, navigation }) => {
               <Text>Quantity: {item.quantity}</Text>
 
               <Button title="+" onPress={() => increaseQuantity(index)} />
-
               <Button title="-" onPress={() => decreaseQuantity(index)} />
-
               <Button title="Remove Item" onPress={() => removeItem(index)} />
             </View>
           ))}
