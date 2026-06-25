@@ -1,12 +1,16 @@
 import { View, StyleSheet, Platform } from "react-native";
 import HouseManagement from "./project/NavigationProj/pages/HouseManagement";
 import { NavigationContainer } from "@react-navigation/native";
+import SplashScreenDemo from "./project/SplashScreen/pages/SplashScreenDemo";
+import MapDemo from "./map/MapDemo";
 
 const App = () => {
   return (
-    <NavigationContainer>
-      <HouseManagement />
-    </NavigationContainer>
+    // <NavigationContainer>
+    //   <HouseManagement />
+    // </NavigationContainer>
+    // <SplashScreenDemo />
+    <MapDemo />
   );
 };
 
